@@ -81,6 +81,7 @@ void update() {
     renderer_update(&state.renderer);
     world_update(&state.world);
     ui_update(&state.ui);
+    //If you are looking for the other keys they are located at c_control.c in the tick funtion
 
     // wireframe toggle (T)
     if (state.window->keyboard.keys[GLFW_KEY_T].pressed) {
@@ -91,7 +92,7 @@ void update() {
     if (state.window->keyboard.keys[GLFW_KEY_ESCAPE].pressed) {
         mouse_set_grabbed(!mouse_get_grabbed());
         system("./pause");
-        
+        mouse_set_grabbed(!mouse_get_grabbed());
     }
 }
 

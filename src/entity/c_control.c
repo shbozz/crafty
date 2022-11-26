@@ -11,12 +11,12 @@ static void update(struct ControlComponent *c_control, struct Entity entity) {
 
     c_camera->camera.pitch -= state.window->mouse.delta.y /
                               (((f32)state.window->frame_delta) /
-                               (c_control->mouse_sensitivity * 15000.0f));
+                               (c_control->mouse_sensitivity * 30000.0f));
     c_camera->camera.pitch = clamp(c_camera->camera.pitch, -PI_2 + 0.01, PI_2 - 0.01);
 
     c_camera->camera.yaw -= state.window->mouse.delta.x /
                             (((f32)state.window->frame_delta) /
-                             (c_control->mouse_sensitivity * 15000.0f));
+                             (c_control->mouse_sensitivity * 30000.0f));
 }
 
 static void tick(struct ControlComponent *c_control, struct Entity entity) {
@@ -32,6 +32,7 @@ static void tick(struct ControlComponent *c_control, struct Entity entity) {
     c_movement->directions.up = state.window->keyboard.keys[GLFW_KEY_SPACE].down;
     c_movement->directions.down = state.window->keyboard.keys[GLFW_KEY_LEFT_SHIFT].down;
 
+    // If you are looking for the other keys they are located in main.c in the update function at line 80.
     if (state.window->keyboard.keys[GLFW_KEY_F].pressed_tick) {
         c_movement->flags.flying = !c_movement->flags.flying;
     }
@@ -41,6 +42,8 @@ static void tick(struct ControlComponent *c_control, struct Entity entity) {
     }
 
     struct Block held_block = BLOCKS[state.ui.hotbar.values[state.ui.hotbar.index]];
+
+    //TODO: Clean up 47-85, there are some redundancies.
 
     switch (mouse_switch){
         case true:
