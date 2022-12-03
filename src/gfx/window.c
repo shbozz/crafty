@@ -106,6 +106,7 @@ void window_create(FWindow init, FWindow destroy, FWindow tick,  FWindow update,
 
     glfwSwapInterval(1);
     glfwSetWindowTitle(window.handle, "MimeCraft");
+    glfwSetWindowIcon(window.handle, 1, "./res/icon.svg");
 }
 
 static void button_array_tick(size_t n, struct Button *buttons) {
