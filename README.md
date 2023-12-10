@@ -1,4 +1,5 @@
-## Minecraft, but it's for UNIX systems (and runs really fast)
+## A little Minecraft clone. The goal is for it to be silent.
+###### Like on the fans.
 
 #### Features:
 - Infinite, procedurally generated world
