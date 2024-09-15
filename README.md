@@ -1,5 +1,4 @@
-## A little Minecraft clone. The goal is for it to be silent.
-###### Like on the fans.
+## Minecraft, but it's for UNIX systems (and runs really fast)
 
 #### Features:
 - Infinite, procedurally generated world
@@ -30,8 +29,8 @@ The game binary, once built with `$ make`, can be found in `./bin/`.
 If you are getting "cannot open file" errors (such as "cannot find ./res/shaders/*.vs"), this is the issue. 
 
 ##### Windows
-Use WSL you can install WSL/Ubuntu from the command line using `wsl --install` or from the microsoft store,
-Ubuntu works best. 
+Use WSL, This will let you use the steps in the Unix-Like section 
+you can install WSL/Ubuntu from the command line using `wsl --install` or from the microsoft store, Ubuntu works best. 
+Than install these: `sudo apt install clang cmake make xorg-dev libglu1-mesa-dev doxygen libx11-dev`.
 
-If you encounter issues update your Ubuntu `$ sudo apt upgrade` `$ sudo apt update`. 
-You should also install these: `sudo apt install clang cmake make xorg-dev libglu1-mesa-dev doxygen libx11-dev`.
+If you encounter issues, update Ubuntu `$ sudo apt upgrade` `$ sudo apt update`. 
